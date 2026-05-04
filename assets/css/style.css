@@ -7,9 +7,9 @@
   --primary: #2c1b69; /* Deep purple*/
   --secondary: #8c5bff;
   --accent: #c4a8ff;
-  --light:#f5f1fe;
+  --light: #f5f1fe;
   --dark: #0d0a1a;
-  --muted:#7a6e99;
+  --muted: #7a6e99;
   --white: #ffffff;
 }
 /*Navbar*/
@@ -54,7 +54,9 @@
 /* Hero Section */
 
 .hero-section {
-  background: linear-gradient(rgba(44, 27, 105, 0.7), rgba(140, 91, 255, 0.7)), url("../images/Designer%20(1).png");
+  background:
+    linear-gradient(rgba(44, 27, 105, 0.7), rgba(140, 91, 255, 0.7)),
+    url("../images/Designer%20(1).png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -112,4 +114,33 @@
 .secondary-text {
   color: var(--secondary);
 }
+
+/*Footer*/
+
+footer {
+  background-color: var(--dark);
+  color: var(--muted);
+  
+}
+
+footer h5 {
+    text-transform: uppercase;
+    font-family: var(--secondary--font);
+}
+
+footer span {
+    color: var(--secondary);
+}
+
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
 
