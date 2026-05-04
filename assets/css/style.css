@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/*CSS variables Color Palette*/
+:root {
+  --primary--font: "Inter", sans-serif;
+  --secondary--font: "Bebas Neue", sans-serif;
+  --primary: #2c1b69; /* Darkish purple*/
+  --secondary: #8c5bff;
+  --white: #ffffff;
+}
+/*Navbar*/
+/* Override the bootstrap color for the nav bar*/
+.navbar {
+  background-color: var(--primary) !important;
+  padding: 14px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+}
+
+.navbar-brand {
+  font-family: var(--secondary--font);
+  font-size: 1.7rem;
+  color: var(--white) !important;
+  letter-spacing: 0.05em;
+}
+
+.navbar-brand span {
+    color: var(--secondary);
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--primary--font);
+  color: white !important;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+.navbar-nav .nav-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: var(--secondary);
+  color: var(--primary) !important;
+  padding: 8px 16px;
+}
