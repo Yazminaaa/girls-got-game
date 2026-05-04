@@ -4,8 +4,12 @@
 :root {
   --primary--font: "Inter", sans-serif;
   --secondary--font: "Bebas Neue", sans-serif;
-  --primary: #2c1b69; /* Darkish purple*/
+  --primary: #2c1b69; /* Deep purple*/
   --secondary: #8c5bff;
+  --accent: #c4a8ff;
+  --light:#f5f1fe;
+  --dark: #0d0a1a;
+  --muted:#7a6e99;
   --white: #ffffff;
 }
 /*Navbar*/
@@ -79,5 +83,33 @@
   background-color: var(--secondary);
   color: var(--white);
   border-color: var(--secondary);
+}
+
+/* Section 1 */
+.section-1 {
+  background-color: var(--light);
+  line-height: 2rem;
+}
+
+.section-1 h2 {
+  text-transform: uppercase;
+}
+
+.section-1 .card-title {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-1 p {
+  color: var(--muted);
+}
+
+.primary-text {
+  color: var(--primary);
+}
+
+.secondary-text {
+  color: var(--secondary);
 }
 
