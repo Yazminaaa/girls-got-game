@@ -26,7 +26,7 @@
 }
 
 .navbar-brand span {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .navbar-nav .nav-link {
@@ -46,3 +46,38 @@
   color: var(--primary) !important;
   padding: 8px 16px;
 }
+
+/* Hero Section */
+
+.hero-section {
+  background: linear-gradient(rgba(44, 27, 105, 0.7), rgba(140, 91, 255, 0.7)), url("../images/Designer%20(1).png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: left;
+}
+
+.hero-section h1 {
+  color: var(--white);
+  font-family: var(--secondary--font);
+  font-size: 5rem;
+}
+
+.hero-section p {
+  color: var(--white);
+  font-family: var(--primary--font);
+}
+
+.hero-section .btn-primary {
+  background-color: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
+  font-weight: bold;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
