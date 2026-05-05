@@ -24,6 +24,12 @@
   color: var(--primary);
 }
 
+.section-subtitle{
+  font-family: var(--primary--font);
+  color: var(--muted);
+}
+
+
 /*Buttons*/
 
 .btn-ggg {
@@ -173,6 +179,20 @@
 
 .origin-story p {
 color: var(--muted);
+}
+
+/* About Page*/ 
+.coaches-section{
+  background-color: var(--accent);
+  padding: 30px;
+}
+.coach-card{
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--white);
+  border-radius: 10px;
+  
+
 }
 /*Footer*/
 
