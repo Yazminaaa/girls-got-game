@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/*Global styling*/
 /*CSS variables Color Palette*/
 :root {
   --primary--font: "Inter", sans-serif;
@@ -12,6 +13,35 @@
   --muted: #7a6e99;
   --white: #ffffff;
 }
+
+.section-title{
+  font-size: 2.5rem;
+  font-family: var(--secondary--font);
+  color: var(--secondary);
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+/*Buttons*/
+
+.btn-ggg {
+  display: inline-block;
+  padding: 10px 36px;
+  border-radius: 50px;
+  font-family: var(--primary--font);
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-ggg-primary{
+  background: var(--secondary);
+  color: var(--white);
+}
+
+
 /*Navbar*/
 /* Override the bootstrap color for the nav bar*/
 .navbar {
@@ -135,7 +165,15 @@
 .secondary-text {
   color: var(--secondary);
 }
+/* origin story*/
+.origin-story{
+  background-color: var(--light);
+  padding: 40px;
+}
 
+.origin-story p {
+color: var(--muted);
+}
 /*Footer*/
 
 footer {
