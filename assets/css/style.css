@@ -309,7 +309,17 @@ color: var(--muted);
 .bring-list__no-text {
   color: var(--muted);
 }
+/*sign up form*/ 
 
+#signup{
+  background:var(--secondary); 
+  padding:80px 0;
+}
+
+.btn{
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+}
 /*Footer*/
 
 footer {
