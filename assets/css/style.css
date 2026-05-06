@@ -12,6 +12,10 @@
   --dark: #0d0a1a;
   --muted: #7a6e99;
   --white: #ffffff;
+
+  --radius: 12px;
+
+
 }
 
 .section-title{
@@ -190,10 +194,122 @@ color: var(--muted);
   text-align: center;
   padding: 32px 20px;
   background: var(--white);
-  border-radius: 10px;
-  
-
+  border-radius: var(--radius)
 }
+
+/*Session Page*/
+.session-details {
+  padding: 80px ;
+  background-color: var(--light);
+}
+.info-box {
+  border-radius: var(--radius);
+  padding: 20px;
+ color: var(--white);
+}
+
+.info-box--primary{
+  background: var(--secondary);
+}
+
+.info-box--secondary{
+  background: var(--primary);
+}
+
+.info-box--light{
+  background: var(--light);
+  border: 2px solid var(--white);
+  color: var(--primary);
+}
+
+.info-box__icon {
+  font-size: 1.8rem;
+  margin-bottom: 6px;;
+}
+
+.info-box__title{
+  font-family: var(--secondary--font);
+  font-size:1.3rem;
+}
+
+.info-box__title--dark{
+  color: var(--primary);
+}
+
+/* Timeline*/
+
+.timeline-heading {
+  font-family: var(--secondary--font);
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  margin-bottom: 24px;
+  color: var(--primary);
+}
+
+ 
+.timeline-label {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+ 
+.timeline-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* What to bring*/
+
+.bring-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px;
+  margin-bottom: 28px;
+}
+ 
+.bring-card__title {
+  font-family: var(--secondary--font);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+ 
+.bring-card__title span {
+  color: var(--primary);
+}
+ 
+.bring-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.bring-list__item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f8;
+  align-items: center;
+}
+ 
+.bring-list__item:last-child {
+  border-bottom: none;
+}
+ 
+.bring-list__icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+ 
+.bring-list__icon--yes { color: var(--primary); }
+.bring-list__icon--no  { color: var(--muted); }
+ 
+.bring-list__no-text {
+  color: var(--muted);
+}
+
 /*Footer*/
 
 footer {
