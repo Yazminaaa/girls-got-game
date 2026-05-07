@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Girls Got Game | West london Woman's Baketball</title>
+    <meta name="description" content="Join Girls Got Game — Wednesday night women's basketball sessions in West London, 7:30-9pm. All abilities welcome. Sign up today." />
+    <title>Sessions | Girls Got Game</title>
     <!-- Bootstrap 5 CSS-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -16,11 +17,14 @@
   </head>
   <body>
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
+      <!--"navbar-expand-lg" = on large screens (lg = 992px+) the menu shows as a horizontal bar.
+        On smaller screens it collapses into the hamburger toggle button.-->
       <div class="container-fluid">
+        <!--"container-fluid" stretches to 100% of the browser width Compare to "container" which has a fixed max-width and centres itself.-->
         <a class="navbar-brand" href="index.html"
-          >🏀Girls Got <span>Game</span></a
-        >
+          >🏀Girls Got <span>Game</span></a>
+          <!--"navbar-brand" makes the text slightly larger and bold.-->
         <button
           class="navbar-toggler"
           type="button"
@@ -28,32 +32,25 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!--The hamburger button that appers on mobile/tablet - data-bs-toggle="collapse" hides/shows the dropdown menu-->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- ms-auto to aglin menu to the right-->
           <ul class="navbar-nav ms-auto">
+            <!--"ms" = margin-start (left margin) "auto" pushes the element as far right as possible -->
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html"
+                >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="sessions.html"
-                >Sessions</a
-              >
+              <a class="nav-link active" aria-current="page" href="sessions.html">Sessions</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -61,32 +58,48 @@
     </nav>
     <!-- Hero Section-->
     <header>
-      <section class="page-hero">
+      <section class="page-hero" aria-label="Sessions page hero">
         <div class="container">
           <h1 class="page-hero-title" id="about-heading">
             Wednesday<span>Sessions</span>
           </h1>
           <p class="page-hero-sub mt-3">
-            Womens's scrimmages every Wednesday evening. All ablities welcome,
+            Women's scrimmages every Wednesday evening. All ablities welcome,
             just bring your energy.
           </p>
+          <!--"mt-3" = Bootstrap margin-top (1rem spacing above the paragraph)-->
         </div>
       </section>
     </header>
     <!--Session details-->
     <main> 
-    <section class="session-details">
+    <section class="session-details" aria-label="sessions-heading">
       <div class="container">
+        <!-- "container" = Centres content with a max-width
+          and adds left/right padding -->
         <div class="row">
-          <!-- Left column: Session Details + Timeline -->
+          <!-- 
+            "row" = Bootstrap grid row. Columns must always sit inside a row.
+            This row creates the two-column layout:
+            left = session details, right = what to bring.
+          -->
           <div class="col-lg-6">
-            <h2 class="section-title" id="details-heading">
+            <h2 class="section-title">
               Session<span> Details</span>
             </h2>
             <div class="row g-3 mb-5">
+                <!-- Nested row for the two info boxes (Wednesday / Time). "g-3" = gap between two boxes "mb-5" = margin-bottom-->
               <div class="col-6">
+                <!-- col-6 = each info box takes half the row width (side by side) -->
                 <div class="info-box info-box--primary">
+                    <!-- 
+                    "info-box" = our custom CSS class for the box base styles.
+                    "info-box--primary" = modifier class that sets the purple background.
+                    This is BEM naming (Block Element Modifier) — a CSS naming convention
+                    that makes class names clear and readable.
+                  -->
                   <div class="info-box__icon">📅</div>
+                   <!-- "info-box__icon" = BEM element class for the icon styling -->
                   <div class="info-box__title">Every Wednesday</div>
                   <div class="info-box__sub">Weekly throughout the year</div>
                 </div>
@@ -94,33 +107,34 @@
               <div class="col-6">
                 <div class="info-box info-box--secondary">
                   <div class="info-box__icon">🕣</div>
-                  <div class="info-box__title">7:30 - 9:00</div>
+                  <div class="info-box__title">7:30 - 9:00 PM</div>
                   <div class="info-box__sub">Doors open at 7:15 PM</div>
                 </div>
               </div>
             </div>
             <div class="col-12">
               <div class="info-box info-box--light">
-                <div class="info-box__location">
                   <div class="info-box__icon">📍</div>
                   <div>
                     <div class="info-box__title info-box__title--dark">
                       West London Sports Centre
                     </div>
                     <div>
-                      123 Shepherds's Bush Road, London W12 - Indoor basketball
+                      123 Shepherd's Bush Road, London W12 - Indoor basketball
                       court
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
           <!-- Right column: What to Bring -->
           <div class="col-lg-6">
             <div class="bring-card">
+                 <!-- "bring-card" = our custom CSS class that styles the white card box -->
               <h3 class="bring-card__title">What To <span>Bring</span></h3>
+              <!-- "bring-card__title" = BEM element class for the card heading style.-->
               <ul class="bring-list">
+                <!--styles the list with our custom tick/cross layout.-->
                 <li class="bring-list__item bring-list__item--yes">
                   <span class="bring-list__icon bring-list__icon--yes">✓</span>
                   <div>
@@ -128,6 +142,9 @@
                     breathable top
                   </div>
                 </li>
+                <!--"bring-list__item" = BEM element class for each list item (flex layout, padding, border).
+                    "bring-list__item--yes" = modifier for items you SHOULD bring.
+                    "bring-list__icon--yes" = modifier that colours the ✓ in purple.-->
                 <li class="bring-list__item bring-list__item--yes">
                   <span class="bring-list__icon bring-list__icon--yes">✓</span>
                   <div>
@@ -152,24 +169,28 @@
                     everything
                   </div>
                 </li>
+                <!-- 
+                    "bring-list__icon--no" = modifier that colours the ✗ in muted grey.
+                    "bring-list__no-text" = class that applies muted text colour.
+                    <em> = emphasis element, makes "not" italic to stress the word.
+                  -->
               </ul>
             </div>
           </div>
         </div>
         <!-- Session timeline -->
+         <div aria-label="Session timeline" class="text-center"> 
         <h3 class="timeline-heading text-center">How the Evening Runs</h3>
-        <div class="session-timeline text-center">
-          <div class="timeline-item">
-            <div><i class="fa-solid fa-check"></i></div>
+            <div><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+            <!--aria-hidden="true" = hides the icon from screen readers (it's decorative —
+                the text content of each item already explains what's happening).-->
             <div><strong>7:15 PM</strong></div>
             <div class="timeline-label">Doors Open &amp; Welcome</div>
             <p class="timeline-desc">
               Get changed, grab some water, meet the coaches and other players.
               Perfect time to introduce yourself if it's your first session.
             </p>
-          </div>
-          <div class="timeline-item">
-            <div><i class="fa-solid fa-check"></i></div>
+            <div><i class="fa-solid fa-check" aria-hidden="true"></i></div>
             <div><strong>7:30 PM</strong></div>
             <div class="timeline-label">Warm-Up &amp; Drills</div>
             <p class="timeline-desc">
@@ -177,32 +198,35 @@
               the group. Coaches provide individual guidance based on your
               level.
             </p>
-          </div>
-          <div class="timeline-item">
-            <div><i class="fa-solid fa-check"></i></div>
+            <div><i class="fa-solid fa-check" aria-hidden="true"></i></div>
             <div><strong>8:00 PM</strong></div>
             <div class="timeline-label">Scrimmage (Game Play)</div>
             <p class="timeline-desc">
               The main event — competitive but friendly 5-a-side games. Teams
               are balanced by coaches to keep it fair and fun for everyone.
             </p>
-          </div>
-          <div class="timeline-item">
-            <div><i class="fa-solid fa-check"></i></div>
+            <div><i class="fa-solid fa-check" aria-hidden="true"></i></div>
             <div><strong>8:45 PM</strong></div>
             <div class="timeline-label">Cool-Down &amp; Wrap-Up</div>
             <p class="timeline-desc">
               Guided cool-down, team debrief and any announcements. We usually
               head to a nearby café afterwards — all welcome!
             </p>
-          </div>
         </div>
       </div>
     </section>
     <!-- ===== SIGN-UP FORM ===== -->
-      <section id="signup">
+      <section id="signup" aria-label="signup-heading">
+        <div class="container">
         <div class="row justify-content-center">
+            <!-- 
+            "row" = Bootstrap grid row.
+            "justify-content-center" = centres the form column horizontally on the page.
+          -->
           <div class="col-12 col-md-8">
+            <!-- 
+              "col-12" = full width on mobile.
+              "col-md-8" = on medium screens (768px+) the form takes 8 of 12 columns,-->
              <div class="text-center">
               <h2 class="section-title text-white">
                 Register Your <span>Interest</span></h2>
@@ -212,24 +236,31 @@
               </p>
             </div>
             <form action="success.html" method="GET">
+                <!-- The browser will navigate to success.html on submission.
+                 - method="GET" = how data is sent. 
+                 - novalidate = tells the browser not to show its own default validation
+                  popups, so we can use Bootstrap's styled validation instead. -->
               <div class="row">
                 <div class="col-12 col-lg-6 mb-3">
                   <label for="name" class="form-label">First Name</label>
                   <input
                     class="form-control"
                     id="first-name"
-                    name="name"
+                    name="first-name"
                     type="text"
                     placeholder="Your first name"
                     required
                   />
                 </div>
+                <!-- Input attributes explained:
+                      - class="form-control" = Bootstrap class that styles the input box
+                      - id="first-name" = unique identifier, matched by the label's for=""-->
                 <div class="col-12 col-lg-6 mb-3">
                   <label for="email" class="form-label">Last Name</label>
                   <input
                     class="form-control"
                     id="last-name"
-                    name="name"
+                    name="last-name"
                     type="text"
                     required
                   />
@@ -250,25 +281,33 @@
             </form>
           </div>
         </div>
+        </div>
       </section>
       </main>
       <!-- Footer-->
     <footer class="bg-dark text-white py-5">
       <div class="container">
         <div class="row gy-4">
+          <!-- 
+          "row" starts the Bootstrap grid for the four footer columns.
+          "gy-4" = gutter on the Y axis only (vertical gaps between rows).
+          "gy" instead of "g" means we only add spacing between rows (when columns wrap 
+          on smaller screens), not between columns horizontally.
+        -->
           <div class="col-12 col-md-6 col-lg-3">
             <h5>🏀 Girls Got <span>Game</span></h5>
             <p class="mb-0">West London's inclusive basketball community for women and girls of all abilities
             </p>
+            <!-- "mb-0" = margin-bottom: 0 — removes the default paragraph bottom margin -->
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Pages</h5>
             <ul class="list-unstyled mb-0">
+              <!--"list-unstyled" = removes the default bullet points and left padding from the list.-->
               <li><a href="index.html" class="footer-link">Home</a></li>
               <li><a href="about.html" class="footer-link">About</a></li>
               <li><a href="sessions.html" class="footer-link">Sessions</a></li>
               <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-              <li><a href="contact.html" class="footer-link">Contact</a></li>
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
@@ -281,19 +320,27 @@
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Follow Us</h5>
             <div class="d-flex gap-3">
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-x-twitter"></i
-              ></a>
+              <!-- 
+              "d-flex" = Bootstrap class that applies display:flex to this div,
+                         making its children sit side by side horizontally.-->
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on x">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <!--- "fs-4" = Bootstrap font-size utility (makes the icons larger)
+                - <i class="fab fa-instagram"> = Font Awesome icon.
+                  "fab" = Font Awesome Brands icon set-->
             </div>
           </div>
+          <div class="col-12"> 
           <hr>
          <p> ©2026 Girls Got Game <br>Yasmin Kalema ♥︎</p> 
+         </div>
         </div>
       </div>
     </footer>
