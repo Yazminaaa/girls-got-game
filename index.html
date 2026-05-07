@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- meta description important for SEO (Search Engine Optimisation) -->
     <meta
       name="description"
       content="Girls Got Game- West London's inclusive basketball club for woman and girls of all ablities. Find sessions, meet the team and join or community"
@@ -19,10 +20,14 @@
   </head>
   <body>
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
+      <!--"navbar-expand-lg" = on large screens (lg = 992px+) the menu shows as a horizontal bar.
+        On smaller screens it collapses into the hamburger toggle button.-->
       <div class="container-fluid">
+        <!--"container-fluid" stretches to 100% of the browser width Compare to "container" which has a fixed max-width and centres itself.-->
         <a class="navbar-brand" href="index.html"
           >🏀Girls Got <span>Game</span></a>
+          <!--"navbar-brand" makes the text slightly larger and bold.-->
         <button
           class="navbar-toggler"
           type="button"
@@ -33,13 +38,13 @@
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!--The hamburger button that appers on mobile/tablet - data-bs-toggle="collapse" hides/shows the dropdown menu-->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- ms-auto to aglin menu to the right-->
           <ul class="navbar-nav ms-auto">
+            <!--"ms" = margin-start (left margin) "auto" pushes the element as far right as possible -->
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+                >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -61,28 +66,38 @@
       <!-- Hero -->
       <section class="hero-section" aria-label="Hero">
         <div class="container">
+          <!-- "container" centres the content horizontally on the page adds left/right padding so content doesn't touch the screen edges-->
           <div class="row align-items-center min-vh-100">
+            <!-- "align-items-center" = Bootstrap flexbox utility. Vertically centres 
+              all columns within this row (aligns them to the middle). "min-vh-100" makes the hero section at least as tall as the browser window -->
             <div class="col-lg-8">
+              <!-- Bootstrap uses a 12-column grid system.
+              "col-lg-8" means: on LARGE screens (992px+), this column takes up 8 out of 12 columns
+              (two thirds of the width).-->
               <h1 class="display-4 fw-bold mb-4">
                 Girls <br/>
                 Got <br/>
                 <span>Game</span>
               </h1>
+              <!--"display-4" = large display heading style (bigger than a normal h1) "mb-4" = margin-bottom-->
               <p class="lead mb-4">
                 Whether you've never touched a basketball or you're ready to
                 level up your game, this is your court. Join a community that
                 celebrates everybody, every skill level, every woman.
               </p>
+              <!-- "lead" = Bootstrap class that makes the paragraph slightly larger and lighter-->
               <a
                 class="btn btn-primary btn-lg"
                 href="sessions.html"
                 >Join Us</a>
+                <!--"btn" = base button styles (padding, border-radius, cursor) "btn-primary"= gives its color "btn-lg" = large button size-->
             </div>
           </div>
         </div>
       </section>
-      <!-- Section 1-->
+      <!-- Section 2-->
       <section class="py-5 section-1">
+        <!-- "py-5"= "py" = padding on the Y axis (top AND bottom) "5" = spacing -->
         <div class="container">
           <h2 class="text-center mb-4">
             <span class="primary-text">Why</span>
@@ -93,12 +108,28 @@
             confidence, community and skills for women and girls across West
             London.
           </p>
+          <!-- mb-5 = larger margin-bottom to create more space before the cards-->
           <div class="row g-4">
+            <!-- "g-4" = gutter size 4. Gutters are the gaps BETWEEN columns and rows.
+            g-4 adds consistent spacing between all the cards automatically.-->
             <div class="col-12 col-md-6 col-lg-3">
+             <!-- - "col-12" = on SMALL screens (mobile): full width (12/12 columns = 100%)
+                           So each card stacks on top of each other on mobile.
+              - "col-md-6" = on MEDIUM screens (768px+): half width (6/12 = 50%)
+                             Two cards sit side by side on tablets.
+              - "col-lg-3" = on LARGE screens (992px+): quarter width (3/12 = 25%)
+                             All four cards sit in a single row on desktop.--> 
               <div class="card h-100 shadow-sm">
+                <!-- "h-100" = height 100% - makes all cards the same height as the tallest card
+                             in the row, so they line up neatly even with different amounts of text.
+                - "shadow-sm" = adds a small drop shadow beneath the card,
+                                giving it a subtle lifted/floating appearance.-->
                 <div class="card-body text-center">
                   <h3 class="card-title h5">🏀<br />All Abilities</h3>
+                  <!-- "h5" = makes the h3 LOOK like an h5 visually (smaller size),
+                              without changing its meaning in the page structure.-->
                   <p class="card-text">
+                    <!-- "card-text" Adds spacing-->
                     Never held a ball? Played at county level? Everyone is
                     welcome.Our coaches adapt sessions to meet you where you
                     are.
@@ -153,14 +184,22 @@
     <footer class="bg-dark text-white py-5">
       <div class="container">
         <div class="row gy-4">
+          <!-- 
+          "row" starts the Bootstrap grid for the four footer columns.
+          "gy-4" = gutter on the Y axis only (vertical gaps between rows).
+          "gy" instead of "g" means we only add spacing between rows (when columns wrap 
+          on smaller screens), not between columns horizontally.
+        -->
           <div class="col-12 col-md-6 col-lg-3">
             <h5>🏀 Girls Got <span>Game</span></h5>
             <p class="mb-0">West London's inclusive basketball community for women and girls of all abilities
             </p>
+            <!-- "mb-0" = margin-bottom: 0 — removes the default paragraph bottom margin -->
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Pages</h5>
             <ul class="list-unstyled mb-0">
+              <!--"list-unstyled" = removes the default bullet points and left padding from the list.-->
               <li><a href="index.html" class="footer-link">Home</a></li>
               <li><a href="about.html" class="footer-link">About</a></li>
               <li><a href="sessions.html" class="footer-link">Sessions</a></li>
@@ -178,6 +217,9 @@
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Follow Us</h5>
             <div class="d-flex gap-3">
+              <!-- 
+              "d-flex" = Bootstrap class that applies display:flex to this div,
+                         making its children sit side by side horizontally.-->
               <a href="#" class="footer-link fs-4" aria-label="Follow us on Instagram">
                 <i class="fab fa-instagram" aria-hidden="true"></i>
               </a>
@@ -187,6 +229,9 @@
               <a href="#" class="footer-link fs-4" aria-label="Follow us on x">
                 <i class="fab fa-x-twitter" aria-hidden="true"></i>
               </a>
+              <!--- "fs-4" = Bootstrap font-size utility (makes the icons larger)
+                - <i class="fab fa-instagram"> = Font Awesome icon.
+                  "fab" = Font Awesome Brands icon set-->
             </div>
           </div>
           <div class="col-12"> 
