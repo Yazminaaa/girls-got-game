@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Girls Got Game | West london Woman's Baketball</title>
+    <!-- meta description important for SEO (Search Engine Optimisation) -->
+    <meta
+      name="description"
+      content=" Learn about Girls Got Game - our story, our coaches and why we created West London's most inclusive women's basketball club."
+    />
+    <title>Girls Got Game | About Us</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,10 +19,14 @@
 </head>
 <body>
      <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+   <nav class="navbar navbar-expand-lg">
+      <!--"navbar-expand-lg" = on large screens (lg = 992px+) the menu shows as a horizontal bar.
+        On smaller screens it collapses into the hamburger toggle button.-->
       <div class="container-fluid">
+        <!--"container-fluid" stretches to 100% of the browser width Compare to "container" which has a fixed max-width and centres itself.-->
         <a class="navbar-brand" href="index.html"
           >🏀Girls Got <span>Game</span></a>
+          <!--"navbar-brand" makes the text slightly larger and bold.-->
         <button
           class="navbar-toggler"
           type="button"
@@ -28,11 +37,13 @@
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!--The hamburger button that appers on mobile/tablet - data-bs-toggle="collapse" hides/shows the dropdown menu-->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- ms-auto to aglin menu to the right-->
           <ul class="navbar-nav ms-auto">
+            <!--"ms" = margin-start (left margin) "auto" pushes the element as far right as possible -->
             <li class="nav-item">
-              <a class="nav-link"href="index.html">Home</a>
+              <a class="nav-link" href="index.html"
+                >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="about.html">About</a>
@@ -43,43 +54,48 @@
             <li class="nav-item">
               <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Hero Section-->
      <header>
-<section class="page-hero">
+<section class="page-hero" aria-label="About page hero">
   <div class="container">
+     <!-- 
+        "container" = Bootstrap class that centres content with a max-width
+        and adds left/right padding so content doesn't touch screen edges.
+      -->
     <h1 class="page-hero-title" id="about-heading"> Our <span>Story</span></h1>
     <p class="page-hero-sub mt-3"> The heart behind Girls Got Game, why we started and what keeps us going</p>
+    <!--"page-hero-sub" = Custom css -->
   </div>
 </section>
 </header>
 <main>
 <!-- Origin story-->
-<section class="origin-story py-5 text-center">
+<section class="origin-story py-5 text-center" aria-labelledby="story-heading">
+  <!-- "py-5" = Bootstrap padding top and bottom (3rem / 48px)-->
   <div class="container">
     <div class="row justify-content-center"> 
+      <!-- "justify-content-center" horizontally centres the colums inside this row-->
     <div class="col-lg-8">
-    <div class="">
         <h2 class="section-title" id="story-heading">How It <span>Started</span></h2>
         <p> Girls Got Game was founded by a group of West London women who were tired of being the only woman on the court. The courts around us were full of talent, but not enough spaces where women and girls could play freely, without judgement, without pressure.</p>
         <p> So we built one. Starting with just eight players in a community sports hall, Girls Got Game has grown into a thriving club of over 100 members from teenagers picking up a ball for the first time, to mums returning to sport after years away, to experienced players competing at a high level.</p>
         <p> Every session, every scrimmage, every high-five on the court is proof that women's basketball in West London is very much alive and growing </p>
   </div>
   </div>
-  </div>
+  <div class="mt-4"> 
   <a href="sessions.html" class="btn-ggg btn-ggg-primary">Join Our Community </a> 
+  </div>
 </div>
 </section>
 <!-- Meet The Coaches-->
- <section class="coaches-section">
+ <section class="coaches-section" aria-labelledby="coaches-heading">
 <div class="container">
   <div class="row justify-content-center mb-5 text-center">
+    <!-- "justify-content-center" = centres the heading column horizontally.-->
     <div class="col-lg-6">
       <h2 class="section-title">
         Meet The <span>Coaches</span>
@@ -88,25 +104,27 @@
     </div>
   </div>
   <div class="row g-4 justify-content-center">
-    <div class="col-md col-lg-4">
+    <!--"row g-4" = Bootstrap grid row with gutter size 4 (gaps between columns)."justify-content-center" = centres the cards if they don't fill the full row width.-->
+    <div class="col-md-6 col-lg-4">
       <div class="coach-card">
         <div class="coach-name"> 🧕🏾 <br> Aisha Thompson</div>
-        <div class="coach-role">Head Coach & Founder</div>
-        <p> Former semi-pro player with 15 years on the court. Aisha Founded Girls Got Game after struggling to find a space where woamn could play without barriers.</p>
+        <div class="coach-role">Head Coach &amp; Founder</div>
+        <!-- The & symbol on its own can cause a W3C validation error-->
+        <p> Former semi-pro player with 15 years on the court. Aisha founded Girls Got Game after struggling to find a space where women could play without barriers.</p>
       </div>
     </div>
-    <div class="col-md col-lg-4">
+    <div class="col-md-6 col-lg-4">
       <div class="coach-card">
         <div class="coach-name"> 🙋🏼‍♀️<br>Rachel Davies</div>
         <div class="coach-role">Assistant Coach - Beginners</div>
         <p>Specialist in welcoming first timers and building fundamentals. Rachel's patient,encouraging style has helped dozens of nervous newcomers fall in love with the game.</p>
       </div>
     </div>
-    <div class="col-md col-lg-4">
+    <div class="col-md-6 col-lg-4">
       <div class="coach-card">
         <div class="coach-name">👩🏽‍🦳<br>Maria Santos</div>
-        <div class="coach-role">Skills & Development Coach</div>
-        <p>With a background in professional coaching across Europe, Maria brings advanced drills and tactical knowledge toour intermediate and advanced players.</p>
+        <div class="coach-role">Skills &amp; Development Coach</div>
+        <p>With a background in professional coaching across Europe, Maria brings advanced drills and tactical knowledge to our intermediate and advanced players.</p>
       </div>
     </div>
   </div>
@@ -117,19 +135,26 @@
     <footer class="bg-dark text-white py-5">
       <div class="container">
         <div class="row gy-4">
+          <!-- 
+          "row" starts the Bootstrap grid for the four footer columns.
+          "gy-4" = gutter on the Y axis only (vertical gaps between rows).
+          "gy" instead of "g" means we only add spacing between rows (when columns wrap 
+          on smaller screens), not between columns horizontally.
+        -->
           <div class="col-12 col-md-6 col-lg-3">
             <h5>🏀 Girls Got <span>Game</span></h5>
             <p class="mb-0">West London's inclusive basketball community for women and girls of all abilities
             </p>
+            <!-- "mb-0" = margin-bottom: 0 — removes the default paragraph bottom margin -->
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Pages</h5>
             <ul class="list-unstyled mb-0">
+              <!--"list-unstyled" = removes the default bullet points and left padding from the list.-->
               <li><a href="index.html" class="footer-link">Home</a></li>
               <li><a href="about.html" class="footer-link">About</a></li>
               <li><a href="sessions.html" class="footer-link">Sessions</a></li>
               <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-              <li><a href="contact.html" class="footer-link">Contact</a></li>
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
@@ -142,19 +167,27 @@
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Follow Us</h5>
             <div class="d-flex gap-3">
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-x-twitter"></i
-              ></a>
+              <!-- 
+              "d-flex" = Bootstrap class that applies display:flex to this div,
+                         making its children sit side by side horizontally.-->
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on x">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <!--- "fs-4" = Bootstrap font-size utility (makes the icons larger)
+                - <i class="fab fa-instagram"> = Font Awesome icon.
+                  "fab" = Font Awesome Brands icon set-->
             </div>
           </div>
+          <div class="col-12"> 
           <hr>
          <p> ©2026 Girls Got Game <br>Yasmin Kalema ♥︎</p> 
+         </div>
         </div>
       </div>
     </footer>
