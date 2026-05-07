@@ -15,10 +15,14 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+     <nav class="navbar navbar-expand-lg">
+      <!--"navbar-expand-lg" = on large screens (lg = 992px+) the menu shows as a horizontal bar.
+        On smaller screens it collapses into the hamburger toggle button.-->
       <div class="container-fluid">
+        <!--"container-fluid" stretches to 100% of the browser width Compare to "container" which has a fixed max-width and centres itself.-->
         <a class="navbar-brand" href="index.html"
           >🏀Girls Got <span>Game</span></a>
+          <!--"navbar-brand" makes the text slightly larger and bold.-->
         <button
           class="navbar-toggler"
           type="button"
@@ -29,13 +33,13 @@
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!--The hamburger button that appers on mobile/tablet - data-bs-toggle="collapse" hides/shows the dropdown menu-->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- ms-auto to aglin menu to the right-->
           <ul class="navbar-nav ms-auto">
+            <!--"ms" = margin-start (left margin) "auto" pushes the element as far right as possible -->
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.html"
+                >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -46,35 +50,46 @@
             <li class="nav-item">
               <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Thank you message-->
      <main class="flex-grow-1 d-flex align-items-center justify-content-center text-center">
+        <!-- "flex-grow-1" = Tells this element to grow and fill all available space. If the navbar is at the top and footer at the bottom, this pushes the main content to fill the gap in between 
+         "d-flex" = applies display:flex to the element 
+         "align-items-center" = Vertically centres the child elements inside the main tag.
+         "justify-content-center"=Horizontally centres the child elements inside the main tag.
+        -->
        <div>
          <h1 class="section-title">Thank <span>You!</span></h1>
          <p class="section-subtitle">We will be in touch soon💜</p>
        </div>
      </main>
      <!--footer-->
-     <footer class="bg-dark text-white py-5">
+    <footer class="bg-dark text-white py-5">
       <div class="container">
         <div class="row gy-4">
+          <!-- 
+          "row" starts the Bootstrap grid for the four footer columns.
+          "gy-4" = gutter on the Y axis only (vertical gaps between rows).
+          "gy" instead of "g" means we only add spacing between rows (when columns wrap 
+          on smaller screens), not between columns horizontally.
+        -->
           <div class="col-12 col-md-6 col-lg-3">
             <h5>🏀 Girls Got <span>Game</span></h5>
             <p class="mb-0">West London's inclusive basketball community for women and girls of all abilities
             </p>
+            <!-- "mb-0" = margin-bottom: 0 — removes the default paragraph bottom margin -->
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Pages</h5>
             <ul class="list-unstyled mb-0">
+              <!--"list-unstyled" = removes the default bullet points and left padding from the list.-->
               <li><a href="index.html" class="footer-link">Home</a></li>
               <li><a href="about.html" class="footer-link">About</a></li>
               <li><a href="sessions.html" class="footer-link">Sessions</a></li>
+              <li><a href="gallery.html" class="footer-link">Gallery</a></li>
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
@@ -87,21 +102,28 @@
           <div class="col-12 col-md-6 col-lg-3">
             <h5>Follow Us</h5>
             <div class="d-flex gap-3">
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="footer-link fs-4"
-                ><i class="fab fa-x-twitter"></i
-              ></a>
+              <!-- 
+              "d-flex" = Bootstrap class that applies display:flex to this div,
+                         making its children sit side by side horizontally.-->
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer-link fs-4" aria-label="Follow us on x">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <!--- "fs-4" = Bootstrap font-size utility (makes the icons larger)
+                - <i class="fab fa-instagram"> = Font Awesome icon.
+                  "fab" = Font Awesome Brands icon set-->
             </div>
           </div>
+          <div class="col-12"> 
           <hr>
          <p> ©2026 Girls Got Game <br>Yasmin Kalema ♥︎</p> 
+         </div>
         </div>
-        
       </div>
     </footer>
     <!-- JS Bootstrap-->
