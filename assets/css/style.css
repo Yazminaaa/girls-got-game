@@ -6,27 +6,34 @@
   --primary--font: "Inter", sans-serif;
   --secondary--font: "Bebas Neue", sans-serif;
   --primary: #2c1b69; /* Deep purple*/
-  --secondary: #8c5bff;
-  --accent: #c4a8ff;
-  --light: #f5f1fe;
-  --dark: #0d0a1a;
-  --muted: #7a6e99;
-  --white: #ffffff;
+  --secondary: #8c5bff; /* Bright purple — accents and highlights */
+  --accent: #c4a8ff; /* Soft lilac — subtle highlights */
+  --light: #f5f1fe; /* Lavender white — page background */
+  --dark: #0d0a1a; /* Near black — footer background */
+  --muted: #7a6e99; /* Purple-grey — body text and subtitles */
+  --white: #ffffff; /* Pure white */
 
-  --radius: 12px;
-
-
+  --radius: 12px; /*--radius stores the border-radius value used on cards and boxes.*/
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.12); /*The values mean:
+    - 0 = no horizontal offset (shadow directly below)
+    - 8px = vertical offset (shadow sits 8px below the element)
+    - 32px = blur radius (how soft/spread the shadow is)
+    - rgba(0,0,0,0.12) = black at 12% opacity (very subtle shadow)*/
 }
 
+/* Global / Shared styles*/
+
 .section-title{
-  font-size: 2.5rem;
+  font-size: 2.5rem; /*- font-size: 2.5rem = 40px (rem is relative to the root font size, usually 16px)*/
   font-family: var(--secondary--font);
   color: var(--secondary);
 }
 
+
 .section-title span {
   color: var(--primary);
 }
+/*Targets <span> elements INSIDE .section-title headings.*/
 
 .section-subtitle{
   font-family: var(--primary--font);
@@ -37,7 +44,7 @@
 /*Buttons*/
 
 .btn-ggg {
-  display: inline-block;
+  
   padding: 10px 36px;
   border-radius: 50px;
   font-family: var(--primary--font);
@@ -45,6 +52,8 @@
   cursor: pointer;
   text-decoration: none;
 }
+/*.btn-ggg is the base class for our custom buttons (not Bootstrap buttons).
+- text-decoration: none = removes underline (important as buttons use <a> tags)*/
 
 .btn-ggg-primary{
   background: var(--secondary);
@@ -60,14 +69,33 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
+/*background-color: var(--primary) =!important = deep purple background.
+    !important overrides Bootstrap's default navbar background colour.
+    We need !important here because Bootstrap also targets .navbar with
+    its own background colour and our CSS would lose without it.
+    
+   - box-shadow: 0 2px 20px rgba(0,0,0,0.3) = subtle drop shadow below the
+    navbar, making it feel elevated above the page content.
+    Values: 0 horizontal, 2px vertical, 20px blur, 30% black opacity.
+  
+   - position: sticky = the navbar sticks to the top of the screen as
+    the user scrolls down. It stays visible at all times.
+
+   - top: 0 = required with sticky — tells it where to stick (top of viewport).
+
+   - z-index controls which element appears ON TOP when elements overlap.
+  Without this, page content could scroll over the navbar instead of under it.
+  1000 is a high value that ensures the navbar always stays on top.
+    */
 
 .navbar-brand {
   font-family: var(--secondary--font);
   font-size: 1.7rem;
   color: var(--white) !important;
-  letter-spacing: 0.05em;
 }
+/* font-size: 1.7rem = slightly larger than normal navbar text*/
 
 .navbar-brand span {
   color: var(--secondary);
@@ -80,29 +108,46 @@
   border-radius: 6px;
 }
 
+/* Styles all navigation links (Home, About, Sessions etc.).
+- border-radius: 6px = slightly rounded corners on the link background,
+    visible on hover when the background colour appears.
+*/
+
 .navbar-nav .nav-link.active {
   text-decoration: underline;
   font-weight: bold;
 }
+
+/*Styles the ACTIVE link — the one matching the current page.*/
 
 .navbar-nav .nav-link:hover {
   background-color: var(--secondary);
   color: var(--primary) !important;
   padding: 8px 16px;
 }
+/*padding: 8px 16px = adds padding so the background fills nicely around the text.
+:hover is a CSS pseudo-class — it only applies when the mouse is over the element.
+*/
 
 
-/* Hero Section */
+/* HERO SECTION */
 
 .hero-section {
   background:
     linear-gradient(rgba(44, 27, 105, 0.7), rgba(140, 91, 255, 0.7)),
     url("../images/Designer%20(1).png");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center; /*background-position: center = keeps the centre of the image in view
+    when it's cropped on smaller screens.*/
+  background-attachment: fixed; /*the background
+    image stays fixed while the page content scrolls over it.*/
   text-align: left;
 }
+/*linear-gradient(rgba(44,27,105,0.7), rgba(140,91,255,0.7))
+     = a purple gradient overlay on top of the image.
+     rgba() is like hex but with a 4th value for opacity (0=transparent, 1=solid).
+     0.7 = 70% opacity, so the image shows through slightly underneath.
+    */
 
 .hero-section h1 {
   color: var(--white);
@@ -121,6 +166,8 @@
   border-color: var(--white);
   font-weight: bold;
 }
+/* Styles Bootstrap's .btn-primary class when it's INSIDE .hero-section.
+  Overrides Bootstrap's default blue button with our white button style.*/
 
 .hero-section .btn-primary:hover {
   background-color: var(--secondary);
@@ -128,13 +175,16 @@
   border-color: var(--secondary);
 }
 
-/* Inner pages*/
+/*Changes the hero button's appearance when hovered.*/
+
+/* PAGE HERO (About, Sessions,Success)*/
 
 .page-hero{
   background-color: var(--primary);
   padding: 80px 0 60px;
-  
 }
+
+/* padding: 80px 0 60px = 80px top, 0 left/right, 60px bottom.*/
 
 .page-hero-title{
   font-size: 4rem;
@@ -149,10 +199,10 @@
 .page-hero-sub{
   color: var(--muted);
 }
-/* Section 1 */
+/* SECTION 1 — Homepage "Why Girls Got Game?" cards */
 .section-1 {
   background-color: var(--light);
-  line-height: 2rem;
+  line-height: 2rem; /*This makes paragraphs easier to read by adding breathing room between lines*/
 }
 
 .section-1 h2 {
@@ -176,31 +226,31 @@
 .secondary-text {
   color: var(--secondary);
 }
-/* origin story*/
+/* ORIGIN STORY — About page */
 .origin-story{
   background-color: var(--light);
-  padding: 40px;
+  padding: 40px; /*padding: 40px = 40px on all four sides*/
 }
 
 .origin-story p {
 color: var(--muted);
 }
 
-/* About Page*/ 
+/* COACHES — About page */ 
 .coaches-section{
   background-color: var(--accent);
   padding: 30px;
 }
 .coach-card{
   text-align: center;
-  padding: 32px 20px;
+  padding: 32px 20px; /* padding: 32px 20px = 32px top/bottom, 20px left/right*/
   background: var(--white);
-  border-radius: var(--radius)
+  border-radius: var(--radius);
 }
 
-/*Session Page*/
+/*SESSION DETAILS — Sessions page*/
 .session-details {
-  padding: 80px ;
+  padding: 80px; /*padding: 80px = generous spacing on all sides inside the section*/
   background-color: var(--light);
 }
 .info-box {
@@ -225,7 +275,7 @@ color: var(--muted);
 
 .info-box__icon {
   font-size: 1.8rem;
-  margin-bottom: 6px;;
+  margin-bottom: 6px;
 }
 
 .info-box__title{
@@ -237,13 +287,13 @@ color: var(--muted);
   color: var(--primary);
 }
 
-/* Timeline*/
+/*TIMELINE — Sessions page*/
 
 .timeline-heading {
   font-family: var(--secondary--font);
   font-size: 1.6rem;
-  margin-top: 4rem;
-  margin-bottom: 24px;
+  margin-top: 4rem; /*separating it from the section above*/
+  margin-bottom: 24px; /*space below before the first timeline item*/
   color: var(--primary);
 }
 
@@ -251,16 +301,16 @@ color: var(--muted);
 .timeline-label {
   font-weight: 600;
   color: var(--secondary);
-  margin-bottom: 4px;
+  margin-bottom: 4px; /*small gap before the description paragraph below*/
 }
  
 .timeline-desc {
   color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0;
+  font-size: 0.9rem; /*slightly smaller than normal, creating hierarchy*/
+  margin: 0; /*removes default paragraph margin (spacing handled by the parent)*/
 }
 
-/* What to bring*/
+/* WHAT TO BRING — Sessions page*/
 
 .bring-card {
   background: var(--white);
@@ -286,38 +336,55 @@ color: var(--muted);
   padding: 0;
   margin: 0;
 }
+
+/*Resets the default <ul> styles for the items list.
+  - list-style: none = removes the default bullet points
+  - padding: 0 = removes default left indent browsers add to lists
+  - margin: 0 = removes default top/bottom margin on the list*/
  
 .bring-list__item {
-  display: flex;
-  gap: 12px;
+  display: flex; /*display: flex = puts the icon and text side by side (not stacked)*/
+  gap: 12px; /*spacing between the icon (✓) and the text*/
   padding: 12px 0;
-  border-bottom: 1px solid #f0f0f8;
+  border-bottom: 1px solid #f0f0f8; /*subtle light divider line between items*/
   align-items: center;
 }
+
  
 .bring-list__item:last-child {
   border-bottom: none;
 }
+/*
+  Removes the divider line from the LAST item in the list.
+  :last-child is a CSS pseudo-class that targets only the final <li>.
+  Without this, the last item would have a border below it
+  which would look odd against the card's padding.
+*/
  
 .bring-list__icon {
   font-size: 1.2rem;
-  flex-shrink: 0;
+  
 }
  
-.bring-list__icon--yes { color: var(--primary); }
-.bring-list__icon--no  { color: var(--muted); }
+.bring-list__icon--yes { color: var(--primary); } /*--yes = deep purple ✓ for items to bring*/
+.bring-list__icon--no  { color: var(--muted); } /* --no  = muted grey ✗ for the "don't need to bring" item*/
  
 .bring-list__no-text {
   color: var(--muted);
 }
-/*sign up form*/ 
+/*
+  Styles the text on the "don't need to bring" item in muted grey,
+  making it visually less prominent than the positive ✓ items.
+*/
+
+/*SIGN-UP FORM — Sessions page*/ 
 
 #signup{
   background:var(--secondary); 
   padding:80px 0;
 }
 
-.btn{
+#signup .btn{
   background-color: var(--primary);
   border: 2px solid var(--primary);
 }
@@ -340,7 +407,7 @@ footer span {
 
 .footer-link {
   color: var(--muted);
-  text-decoration: none;
+  text-decoration: none; /*removes the default underline from links*/
 }
 
 .footer-link:hover,
@@ -348,5 +415,15 @@ footer span {
   color: var(--secondary);
   text-decoration: none;
 }
+/*
+  Changes footer links when hovered over or focused (keyboard navigation).
+  - color: var(--secondary) = bright purple on hover
+  - text-decoration: none = keeps underline removed on hover
+ 
+  :hover = triggered by mouse.
+  :focus = triggered by keyboard (Tab key). Important for accessibility —
+  keyboard users need to see which link is focused, same as mouse users.
+  Listing both together means the style applies to both interactions.
+*/
 
 
