@@ -435,4 +435,128 @@ footer span {
   Listing both together means the style applies to both interactions.
 */
 
+ /* Media Queries */
+
+ /*@media (max-width: 768px) means:
+  "Only apply these styles when the screen is 768px wide or LESS"
+  768px is the standard breakpoint for mobile/tablet screens.*/
+
+  @media (max-width: 768px) {
+ 
+  /* --- PAGE HERO --- */
+ 
+  .page-hero {
+    padding: 40px 0 30px;/*
+      Reduces the top and bottom padding on mobile.
+      The original 80px top / 60px bottom was too tall for small screens,
+      pushing content too far down.
+    */
+  }
+ 
+  .page-hero-title {
+    font-size: 2.2rem;
+    /*
+      This is the main fix for the cut-off hero title.
+      The original font-size: 4rem (64px) is too wide for a mobile screen.
+      2.2rem (35px) fits "WEDNESDAY SESSIONS" on the screen without overflowing.
+    */
+    word-break: break-word;
+    /*
+      word-break: break-word = if a single word is still too long,
+      allow it to break onto the next line rather than overflow off screen.
+      Safety net in case the title is ever longer.
+    */
+  }
+ 
+  .page-hero-sub {
+    font-size: 0.95rem;
+    /*
+      Slightly reduces the subtitle text size on mobile for better fit.
+    */
+  }
+ 
+  /* --- SESSION DETAILS SECTION --- */
+ 
+  .session-details {
+    padding: 40px 16px;
+    /*
+      Reduces the padding on mobile.
+      Original padding: 80px on all sides was creating too much
+      empty space and squeezing the content on small screens.
+      16px left/right gives the content breathing room from the screen edge.
+    */
+  }
+ 
+  /* --- SECTION TITLE (SESSION DETAILS heading) --- */
+ 
+  .section-title {
+    font-size: 1.8rem;
+    /*
+      Reduces the "SESSION DETAILS" heading from 2.5rem to 1.8rem on mobile.
+      This stops it stacking onto two lines as seen in your screenshot.
+    */
+  }
+ 
+  /* --- INFO BOXES (Wednesday / Time boxes) --- */
+ 
+  .info-box {
+    padding: 14px;
+    /*
+      Reduces padding inside the boxes so the text has more room.
+    */
+  }
+ 
+  .info-box__title {
+    font-size: 1rem;
+    /*
+      Reduces the title text inside boxes (e.g. "EVERY WEDNESDAY").
+      Original 1.3rem was too large for the box width, causing text to
+      overflow and get cut off as seen in your screenshot.
+    */
+    word-break: break-word;
+    /*
+      Allows long words to wrap inside the box rather than overflow.
+    */
+  }
+ 
+  .info-box__icon {
+    font-size: 1.4rem;
+    /*
+      Slightly reduces the emoji icon size to save vertical space.
+    */
+  }
+ 
+  /* --- BRING CARD --- */
+ 
+  .bring-card {
+    padding: 20px;
+    /*
+      Reduces the padding inside the What To Bring card on mobile.
+      Original 36px was too much on a small screen.
+    */
+    margin-bottom: 20px;
+  }
+ 
+  /* --- TIMELINE --- */
+ 
+  .timeline-heading {
+    font-size: 1.3rem;
+    /*
+      Reduces the "How the Evening Runs" heading size on mobile.
+    */
+    margin-top: 2rem;
+    /*
+      Reduces the top margin from 4rem — less space needed on mobile.
+    */
+  }
+ 
+  /* --- SIGN UP FORM --- */
+ 
+  #signup {
+    padding: 40px 0;
+    /*
+      Reduces the top and bottom padding of the signup section on mobile.
+    */
+  }
+}
 
