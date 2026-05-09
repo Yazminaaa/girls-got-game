@@ -1,10 +1,23 @@
 # 🏀 Girls Got Game 
 
-**Live Website: https://yazminaaa.github.io/girls-got-game/index.html
+Live Website: https://yazminaaa.github.io/girls-got-game/index.html
 
 Girls Got Game is a community-focused website designed for women and girls who love basketball, from complete beginners picking up a ball for the first time, to advanced players looking to develop their skills and connect with others. 
 
 ---
+
+## Table of Contents 
+
+1. [Project Overview](#1-project-overview)
+2. [Design](#2-design)
+3. [Features](#3-features)
+4. [Testing](#4-testing)
+5. [Deployment](#5-deployment)
+6. [Credits](#6-credits)
+7. [AI Declaration](#7-ai-declaration)
+
+---
+
 
 ## 1. Project Overview 
 
@@ -56,8 +69,108 @@ The homepage features a full screen hero section with a background image, purple
 
 ### About Page 
 
-The About 
+The About page tells the club's origin story and introduces the coaching team.
 
+### Session page 
+
+The Sessions page gives users everything they need to know about attending a session e.g time, location and what to bring. 
+
+### Success / Thank You Page 
+
+A confirmation page shown after the form is submitted, using bootstrap flexbox to centre the message. 
+
+### Footer 
+
+A consistent footer appears on all four pages containing:
+
+- Club description 
+- Page navigation links 
+- Contact details 
+- Social media links 
+
+### Responsive Layout
+
+The site is fully responsive across mobile, tablet, laptop and desktop using Bootstrap grid system and a custom CSS media query (`max-width: 768px`) to adjust font sizes and padding on smaller screens. 
+
+---
+
+## 4. Testing 
+
+### Responsive Testing 
+
+The website was tested for responsiveness using chrome DevTools and the [Am I Responsive](https://bytes.dev/?s=amiresponsive)
+
+**Home Page across devices:**
+![Home page responsive](assets/images/homepage-ggg.png)
+
+**About Page across devices:**
+![About page responsive](assets/images/aboutpage-ggg.png)
+
+**Sesssion Page across devices:**
+![Session page responsive](assets/images/sessionspage-ggg.png)
+
+**Success Page across devices:**
+![Success page responsive](assets/images/thankyoupage-ggg.png)
+
+### HTML Validation 
+
+All HTML pages were tested using the [W3C CSS Checker](https://validator.w3.org/#validate_by_input)
+
+No errorrs or warnings were found.
+
+**Home Page HTML Validation check**
+![HTML Validation screenshot](assets/images/homepage-html-validation%20.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 5. Deployment 
+
+The website was deployed using GitHub Pages 
+
+### Steps to deploy:
+
+1. Push all files to a GitHub repository 
+2. In the repository, go to **Settings → Pages** 
+3. Under **Source**, select **Deploy from a branch** 
+4. Select **main** branch and **/(root)** folder
+5. Click **Save** - GitHub will generate a live link 
+
+## 6. Credits 
+
+### Media
+
+- Hero background image - AI generated using Microsoft Designer 
+- Social media icons - [Font Awesome](https://fontawesome.com/)
+- Fonts - [Google Fonts](https://fonts.google.com/)
+- Bootstrap 5 -[getbootstrap.com](https://getbootstrap.com/)
+- Responsive device mockup images - [Am I Responsive](https://bytes.dev/?s=amiresponsive)
+
+### Content
+
+-Club infomation, content, session detailsand coach bios are fictional, created for the purpose of this projact
+
+## 7. Ai Declaration 
+
+This project was built with assistance from copilot and Claude for the following purposes:
+
+- To clarify and gain deeper understanding of code 
+- Content generation 
+- Suggesting CSS fixes for responsive layout issue (media query)
+
+---
+
+*©2026 Grirls Got Game - Yasmin Kalema ♡*
+[Back to the top](#-girls-got-game)
 
 
 
