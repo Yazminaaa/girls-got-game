@@ -1,19 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Join Girls Got Game — Wednesday night women's basketball sessions in West London, 7:30-9pm. All abilities welcome. Sign up today." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Girls Got Game — Wednesday night women's basketball sessions in West London, 7:30-9pm. All abilities welcome. Sign up today.">
     <title>Sessions | Girls Got Game</title>
     <!-- Bootstrap 5 CSS-->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Custom CSS-->
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <!-- Navbar-->
@@ -91,7 +87,7 @@
                 <div class="info-box info-box--primary">
                     <!-- 
                     "info-box" = our custom CSS class for the box base styles.
-                    "info-box--primary" = modifier class that sets the purple background.
+                    "info-box-primary" = modifier class that sets the purple background.
                     This is BEM naming (Block Element Modifier) — a CSS naming convention
                     that makes class names clear and readable.
                   -->
@@ -140,8 +136,8 @@
                   </div>
                 </li>
                 <!--"bring-list__item" = BEM element class for each list item (flex layout, padding, border).
-                    "bring-list__item--yes" = modifier for items you SHOULD bring.
-                    "bring-list__icon--yes" = modifier that colours the ✓ in purple.-->
+                    "bring-list__item-yes" = modifier for items you SHOULD bring.
+                    "bring-list__icon-yes" = modifier that colours the ✓ in purple.-->
                 <li class="bring-list__item bring-list__item--yes">
                   <span class="bring-list__icon bring-list__icon--yes">✓</span>
                   <div>
@@ -167,7 +163,7 @@
                   </div>
                 </li>
                 <!-- 
-                    "bring-list__icon--no" = modifier that colours the ✗ in muted grey.
+                    "bring-list__icon-no" = modifier that colours the ✗ in muted grey.
                     "bring-list__no-text" = class that applies muted text colour.
                     <em> = emphasis element, makes "not" italic to stress the word.
                   -->
@@ -176,7 +172,7 @@
           </div>
         </div>
         <!-- Session timeline -->
-         <div aria-label="Session timeline" class="text-center"> 
+         <div aria-label="Session timeline" role="region" class="text-center"> 
         <h3 class="timeline-heading text-center">How the Evening Runs</h3>
             <div><i class="fa-solid fa-check" aria-hidden="true"></i></div>
             <!--aria-hidden="true" = hides the icon from screen readers (it's decorative —
@@ -239,7 +235,7 @@
                   popups, so we can use Bootstrap's styled validation instead. -->
               <div class="row">
                 <div class="col-12 col-lg-6 mb-3">
-                  <label for="name" class="form-label">First Name</label>
+                  <label for="first-name" class="form-label">First Name</label>
                   <input
                     class="form-control"
                     id="first-name"
@@ -247,13 +243,13 @@
                     type="text"
                     placeholder="Your first name"
                     required
-                  />
+                  >
                 </div>
                 <!-- Input attributes explained:
                       - class="form-control" = Bootstrap class that styles the input box
                       - id="first-name" = unique identifier, matched by the label's for=""-->
                 <div class="col-12 col-lg-6 mb-3">
-                  <label for="email" class="form-label">Last Name</label>
+                  <label for="last-name" class="form-label">Last Name</label>
                   <input
                     class="form-control"
                     id="last-name"
@@ -261,10 +257,10 @@
                     type="text"
                     placeholder="Last Name"
                     required
-                  />
+                  >
                 </div>
                 <div class="col-12">
-                  <label for="phone" class="form-label">Email Address</label>
+                  <label for="email" class="form-label">Email Address</label>
                   <input
                     class="form-control"
                     id="email"
@@ -272,7 +268,7 @@
                     type="email"
                     placeholder="your@email.com"
                     required
-                  />
+                  >
                 </div>
               </div>
               <button type="submit" class="btn btn-primary mt-3">Submit</button>
@@ -283,7 +279,7 @@
       </section>
       </main>
       <!-- Footer-->
-    <footer class="bg-dark text-white py-5">
+     <footer class="bg-dark text-white py-5">
       <div class="container">
         <div class="row gy-4">
           <!-- 
@@ -293,13 +289,13 @@
           on smaller screens), not between columns horizontally.
         -->
           <div class="col-12 col-md-6 col-lg-3">
-            <h5>🏀 Girls Got <span>Game</span></h5>
+            <h2 class="h5">🏀 Girls Got <span>Game</span></h2>
             <p class="mb-0">West London's inclusive basketball community for women and girls of all abilities
             </p>
             <!-- "mb-0" = margin-bottom: 0 — removes the default paragraph bottom margin -->
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <h5>Pages</h5>
+            <h2 class="h5">Pages</h2>
             <ul class="list-unstyled mb-0">
               <!--"list-unstyled" = removes the default bullet points and left padding from the list.-->
               <li><a href="index.html" class="footer-link">Home</a></li>
@@ -308,14 +304,14 @@
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <h5>Contact</h5>
+            <h2 class="h5">Contact</h2>
             <ul class="list-unstyled mb-0">
               <li class="footer-link">info@girlsgotgame.co.uk</li>
               <li class="footer-link">020 0000 0000</li>
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <h5>Follow Us</h5>
+            <h2 class="h5">Follow Us</h2>
             <div class="d-flex gap-3">
               <!-- 
               "d-flex" = Bootstrap class that applies display:flex to this div,

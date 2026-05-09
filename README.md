@@ -51,7 +51,7 @@ The colour palette was chosen to reflect a bold, energetic design with a feminin
 |`--dark`|`#0d0a1a`|
 |`--muted`|`#7a6e99`|
 
-All colours are stored as CSS variables in `style.css` so the entire palette can be updated fromone place. 
+All colours are stored as CSS variables in `style.css` so the entire palette can be updated from one place. 
 
 ### Wireframes 
 
@@ -120,6 +120,12 @@ No errorrs or warnings were found.
 
 **Home Page HTML Validation check**
 ![HTML Validation screenshot](assets/images/homepage-html-validation%20.png)
+
+**About Page HTML Validation check**
+![HTML Validation screenshot](assets/images/Aboutpage-html-validation.png)
+
+**Sesssion Page HTML Validation check**
+![HTML Validation screenshot](assets/images/Aboutpage-html-validation.png)
 
 
 
