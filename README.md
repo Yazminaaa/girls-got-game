@@ -114,7 +114,7 @@ The website was tested for responsiveness using chrome DevTools and the [Am I Re
 
 ### HTML Validation 
 
-All HTML pages were tested using the [W3C CSS Checker](https://validator.w3.org/#validate_by_input)
+All HTML pages were tested using the [W3C HTML Checker](https://validator.w3.org/#validate_by_input)
 
 No errorrs or warnings were found.
 
@@ -125,22 +125,58 @@ No errorrs or warnings were found.
 ![HTML Validation screenshot](assets/images/Aboutpage-html-validation.png)
 
 **Sesssion Page HTML Validation check**
-![HTML Validation screenshot](assets/images/Aboutpage-html-validation.png)
+![HTML Validation screenshot](assets/images/sessionspage-html-validation.png)
+
+**Success Page HTML Validation check**
+![HTML Validation screenshot](assets/images/successpage-html-validation.png)
+
+The CSS page was tested using [W3C CSS Checker](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+**Style.css CSS Validation check**
+![CSS Validation screenshot](assets/images/Css-validation.png)
+
+### Lighthouse Performance Testing 
+
+Lighthouse tests were run in Google Chrome Devtools 
+
+## Home Page lighthouse result
+
+**Desktop Results**
+![Lighthouse desktop screenshot](assets/images/home-desktop-lighthouse.png)
+
+**Mobile Results**
+![Lighthouse mobile screenshot](assets/images/home-mobile-lighthouse.png)
+
+## About Page lighthouse result
+
+**Desktop Results**
+![Lighthouse desktop screenshot](assets/images/about-desktop-lighthouse.png)
+
+**Mobile Results**
+![Lighthouse mobile screenshot](assets/images/about-mobile-lighthouse.png)
 
 
+## Session Page lighthouse result
 
+**Desktop Results**
+![Lighthouse desktop screenshot](assets/images/sessions-desktop-lighthouse.png)
 
+**Mobile Results**
+![Lighthouse mobile screenshot](assets/images/sessions-mobile-lighthouse.png)
 
+## Success Page lighthouse result
 
+**Desktop Results**
+![Lighthouse desktop screenshot](assets/images/sessions-desktop-lighthouse.png)
 
+**Mobile Results**
+![Lighthouse mobile screenshot](assets/images/sessions-mobile-lighthouse.png)
 
+### Bugs/ Errors 
 
+No bugs and errors in this code.
 
-
-
-
-
-
+---
 
 ## 5. Deployment 
 
