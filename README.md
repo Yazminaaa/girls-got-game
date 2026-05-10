@@ -167,10 +167,10 @@ Lighthouse tests were run in Google Chrome Devtools
 ## Success Page lighthouse result
 
 **Desktop Results**
-![Lighthouse desktop screenshot](assets/images/sessions-desktop-lighthouse.png)
+![Lighthouse desktop screenshot](assets/images/Success-desktop-lighthouse.png)
 
 **Mobile Results**
-![Lighthouse mobile screenshot](assets/images/sessions-mobile-lighthouse.png)
+![Lighthouse mobile screenshot](assets/images/Success-mobile-lighthouse.png)
 
 ### Bugs/ Errors 
 
